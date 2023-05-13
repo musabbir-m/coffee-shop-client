@@ -6,7 +6,7 @@ const Allmenu = () => {
     const [allmenu, setAllmenu] = useState([]);
     const [loading, setLoading] = useState(true)
     useEffect(() => {
-      fetch("http://localhost:5000/allservices")
+      fetch("https://coffee-server-six.vercel.app/allservices")
         .then((res) => res.json())
         .then((data) => {setAllmenu(data)
         setLoading(false)

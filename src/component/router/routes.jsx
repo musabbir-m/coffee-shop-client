@@ -44,7 +44,7 @@ const router= createBrowserRouter([
                   <PrivateRoute><MenuDetail></MenuDetail></PrivateRoute>
                 ),
                 loader: ({ params }) =>
-                  fetch(`http://localhost:5000/menu/${params.id}`),
+                  fetch(`https://coffee-server-six.vercel.app/menu/${params.id}`),
               },
 
               {
