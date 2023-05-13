@@ -2,7 +2,7 @@ import React from 'react'
 
 const Banner = () => {
   return (
-    <div className='flex flex-col px-5 md:flex-row justify-center items-center bg-[#F3E9DD]'>
+    <div className='flex flex-col px-2 md:flex-row justify-center items-center bg-[#F3E9DD]'>
         <div className='flex w-2/4 flex-col break-normal'>
             <h2 className='text-2xl md:text-5xl py-4'>
              Your destination to all the Great Coffee!
@@ -17,8 +17,8 @@ const Banner = () => {
           </div>
 
         </div>
-        <div className='w-2/4'>
-            <img className='w-full' src="https://i.ibb.co/pdWfDgD/coffeCup.png" alt="" />
+        <div className='w-2/4 relative flex justify-center'>
+            <img className='max-w-full min-w-[300px] ' src="https://i.ibb.co/pdWfDgD/coffeCup.png" alt="" />
         </div>
     </div>
 //    
