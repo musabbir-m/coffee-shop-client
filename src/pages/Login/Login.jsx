@@ -18,19 +18,20 @@ const handleLogin= (data)=> {
     setError("")
     login(data.email, data.password)
     .then(user=> console.log(user))
-   
-    navigate(from, {replace: true})
-
     .catch((err) => setError(err.message));
     console.log(data);
+    
 
 
 
    
 }
 return (
-   <div className="hero min-h-screen bg-base-200">
-      <div className=" flex-shrink-0 card w-full max-w-sm shadow-2xl bg-base-100">
+   <div>
+    <h2 className='text-center text-4xl py-3 text-[#D3756B]'>Login</h2>
+    
+    <div className="flex justify-center items-center">
+      <div className=" card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
         <div className="card-body">
           <form onSubmit={handleSubmit(handleLogin)} action="">
           <div className="form-control">
@@ -65,12 +66,14 @@ return (
           <button type="submit" className="px-4 py-3 bg-[#D3756B] text-white hover:bg-orange-400">
             Login
           </button>
+          {error && <p className='text-red-500'>{error}</p>}
           </div>
           </form>
         </div>
       </div>
 
       </div>
+   </div>
    
 
 );
