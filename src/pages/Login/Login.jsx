@@ -19,7 +19,8 @@ const handleLogin= (data)=> {
     login(data.email, data.password)
     .then(user=> console.log(user))
     .catch((err) => setError(err.message));
-    console.log(data);
+    navigate(from, {replace: true})
+  
     
 
 

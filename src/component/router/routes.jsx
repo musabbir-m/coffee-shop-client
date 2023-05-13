@@ -7,6 +7,8 @@ import Login from "../../pages/Login/Login"
 import MainLayout from "../../Layout/MainLayout"
 import Signup from "../../pages/Signup/Signup"
 import Allmenu from "../../pages/Allmenu/Allmenu";
+import PrivateRoute from "./PrivateRoute";
+import MenuDetail from "../../pages/MenuDetail/MenuDetail";
 
 
 
@@ -36,6 +38,19 @@ const router= createBrowserRouter([
                 path: '/signup',
                 element: <Signup></Signup>
             },
+            {
+                path: "/menu/:id",
+                element: (
+                  <PrivateRoute><MenuDetail></MenuDetail></PrivateRoute>
+                ),
+                loader: ({ params }) =>
+                  fetch(`http://localhost:5000/menu/${params.id}`),
+              },
+
+              {
+                path: "/allmenu",
+                element: <PrivateRoute><Allmenu></Allmenu></PrivateRoute>
+              }
         ]
     }
 ])

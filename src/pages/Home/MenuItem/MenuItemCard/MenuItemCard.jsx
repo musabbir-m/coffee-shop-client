@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const MenuItemCard = ({data}) => {
   return (
@@ -8,7 +9,11 @@ const MenuItemCard = ({data}) => {
     <h2 className="card-title">{data.title}</h2>
     <p>How to park your car at your garage?</p>
     <div className="card-actions justify-end">
-      <button className="py-4 px-2 w-38 bg-[#DAB88B] text-white text-lg font-bold hover:bg-inherit hover:text-black hover:border-2  hover:border-[#DAB88B] ">View Details</button>
+      
+      <Link
+              to={`/menu/${data.title}`}
+              className="py-4 px-2 w-38 bg-[#DAB88B] text-white text-lg font-bold hover:bg-inherit hover:text-black hover:border-2  hover:border-[#DAB88B] ease-in duration-100"
+            >View Details</Link>
     </div>
   </div>
 </div>

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import MenuItemCard from './MenuItemCard/MenuItemCard';
+import { Link } from 'react-router-dom';
 
 const MenuItem = () => {
 
-    const makeSlice = true;
+   
     const [services, setServices] = useState([]);
     const [loading, setLoading] = useState(true)
     useEffect(() => {
@@ -25,8 +26,10 @@ const MenuItem = () => {
         services.map(service=> <MenuItemCard key={service._id} data={service}></MenuItemCard>)
       }
       </div>
-      <button className='px-8 py-4 bg-[#A75D5D] text-white text-xl font-bold mt-8 hover:bg-inherit hover:border-2 border-[#A75D5D] hover:text-black'>See all</button>
+     
+      <Link to="/allmenu" className='px-8 py-4 bg-[#A75D5D] text-white text-xl font-bold mt-8 hover:bg-inherit hover:border-2 border-[#A75D5D] hover:text-black'>See All</Link>
     </div>
+    
   )
 }
 
