@@ -44,7 +44,6 @@ const Signup = () => {
        <h1 className='text-center text-4xl py-3 text-[#D3756B]'>Sign Up</h1>
     <div className="flex items-center justify-center">
        
-       
       <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
         <div className="card-body">
           <form onSubmit={handleSubmit(handleSignup)} action="">
