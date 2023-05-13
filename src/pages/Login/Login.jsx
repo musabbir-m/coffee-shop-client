@@ -4,7 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../component/Context/AuthProvider'
 
 const Login = () => { 
-const {login}= useContext(AuthContext)
+const {login, googleSignin}= useContext(AuthContext)
 const location= useLocation()
 const navigate= useNavigate()
 const from= location.state?.from?.pathname || '/'
@@ -20,12 +20,13 @@ const handleLogin= (data)=> {
     .then(user=> console.log(user))
     .catch((err) => setError(err.message));
     navigate(from, {replace: true})
-  
-    
-
-
-
    
+}
+
+const googleSigninHandler= ()=> {
+  googleSignin()
+  .then (data=> console.log(data))
+  .catch(err=> console.log(err))
 }
 return (
    <div>
@@ -70,6 +71,11 @@ return (
           {error && <p className='text-red-500'>{error}</p>}
           </div>
           </form>
+          <p className='text-center'>Or</p>
+          <button 
+          className="px-4 py-3 bg-gray-500 text-white hover:bg-orange-400"
+          onClick={googleSigninHandler}
+          >Signin with Google</button>
         </div>
       </div>
 

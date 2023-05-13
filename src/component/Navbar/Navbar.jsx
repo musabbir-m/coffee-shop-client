@@ -16,7 +16,7 @@ const Navbar = () => {
       </li>
       <li className="mr-3">
         {" "}
-        <Link>Products</Link>{" "}
+        <Link to="/allmenu">Products</Link>{" "}
       </li>
       <li className="mr-3">
         {" "}
@@ -91,7 +91,7 @@ const Navbar = () => {
             </ul>
           </div>
           
-          <a className=""> <img className='min-w-[40px] w-2/6 sm:block md:inline' src="logoCoffe.png" alt="" /> Coffee Culture</a>
+          <a className="text-[#99627A] font-bold text-xl "> <img className='min-w-[40px] w-2/6 sm:block md:inline' src="logoCoffe.png" alt="" /> Coffee Culture</a>
         </div>
        
         <div className="navbar-center hidden lg:flex">

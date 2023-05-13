@@ -4,7 +4,7 @@ const Banner = () => {
   return (
     <div className='flex flex-col px-2 md:flex-row justify-center items-center bg-[#F3E9DD]'>
         <div className='flex w-2/4 flex-col break-normal'>
-            <h2 className='text-2xl md:text-5xl py-4'>
+            <h2 className='text-2xl md:text-5xl lg:text-6xl font-bold py-4'>
              Your destination to all the Great Coffee!
             </h2>
             <p className='text-xl mt-3'>

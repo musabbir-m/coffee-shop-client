@@ -7,7 +7,7 @@ const MenuDetail = () => {
   return (
     <div className='mt-5'>
         <div className="card  bg-base-100 shadow-xl">
-  <figure><img className='w-96 h-58' src={data.img} alt="Movie"/></figure>
+  <figure><img className='max-w-96 h-58' src={data.img} alt="Movie"/></figure>
   <div className="card-body">
   <h2 className="text-2xl md:text-4xl font-bold text-center text-[#A75D5D]">{data.title}</h2>
     <div>
